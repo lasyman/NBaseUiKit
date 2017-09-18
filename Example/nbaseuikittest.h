@@ -155,6 +155,10 @@ private slots:
      * @brief on_pushButton_28_clicked 页码控件测试
      */
     void on_pushButton_28_clicked();
+    /**
+     * @brief on_pushButton_29_clicked 搜索按钮
+     */
+    void on_pushButton_29_clicked();
 
 private:
     Ui::NBaseUiKitTest *ui;

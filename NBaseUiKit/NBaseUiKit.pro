@@ -48,6 +48,11 @@ message(Qt is installed in $$[QT_INSTALL_PREFIX])
 message(the NBaseUiKit will create in folder: $$target_path)
 
 FORMS += \
-    ui/page_bar.ui
+    ui/page_bar.ui \
+    ui/search_button.ui
+
+HEADERS +=
+
+SOURCES +=
 
 

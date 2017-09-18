@@ -31,6 +31,7 @@
 #include "nbaseclickwave.h"
 #include "nbasecountdown.h"
 #include "nbasepagebar.h"
+#include "nbasesearchbutton.h"
 
 
 NBaseUiKitTest::NBaseUiKitTest(QWidget *parent) :
@@ -517,4 +518,17 @@ void NBaseUiKitTest::on_pushButton_28_clicked()
     ui->textBrowser->insertPlainText(tr("页码 测试用例,执行成功,一分钟后将会关闭……\r\n"));
     // 一分钟后关闭
     QTimer::singleShot(60000, test_case_28, SLOT(deleteLater()));
+}
+
+void NBaseUiKitTest::on_pushButton_29_clicked()
+{
+    // 搜索按钮测试
+    NBaseSearchButton *test_case_29 = new NBaseSearchButton();
+    connect(test_case_29, &NBaseSearchButton::sigSearchKey, this, [this](const QString &strKey){
+        ui->textBrowser->insertPlainText(tr("搜索关键字： %1\n").arg(strKey));
+    });
+    connect(test_case_29, &NBaseSearchButton::sigSearchClear, this, [this](){
+        ui->textBrowser->insertPlainText(tr("清除搜索！\n"));
+    });
+    test_case_29->show();
 }
