@@ -23,7 +23,8 @@ SOURCES += \
     $$PWD/src/nbasetoolbutton.cpp \
     $$PWD/src/nbaselogowidget.cpp \
     $$PWD/src/nbaseclickwave.cpp \
-    $$PWD/src/nbasecountdown.cpp
+    $$PWD/src/nbasecountdown.cpp \
+    $$PWD/src/nbasepagebar.cpp
 
 HEADERS +=\
     $$PWD/inc/nbaseuikit_global.h \
@@ -51,7 +52,8 @@ HEADERS +=\
     $$PWD/inc/nbasetoolbutton.h \
     $$PWD/inc/nbaselogowidget.h \
     $$PWD/inc/nbaseclickwave.h \
-    $$PWD/inc/nbasecountdown.h
+    $$PWD/inc/nbasecountdown.h \
+    $$PWD/inc/nbasepagebar.h
 
 
 INCLUDEPATH += $$PWD/inc/ \

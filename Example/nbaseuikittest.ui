@@ -389,6 +389,13 @@
      </property>
     </widget>
    </item>
+   <item row="3" column="6">
+    <widget class="QPushButton" name="pushButton_28">
+     <property name="text">
+      <string>页码测试</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>

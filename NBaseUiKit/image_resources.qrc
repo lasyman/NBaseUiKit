@@ -26,5 +26,10 @@
         <file alias="bright">img/brightness.png</file>
         <file alias="image_bg">img/image.png</file>
         <file alias="lock_t">img/locked_2.png</file>
+        <file>qss/pageBar.qss</file>
+        <file>img/page_first.png</file>
+        <file>img/page_last.png</file>
+        <file>img/page_next.png</file>
+        <file>img/page_previous.png</file>
     </qresource>
 </RCC>

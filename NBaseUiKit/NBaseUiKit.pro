@@ -31,19 +31,23 @@ RESOURCES += \
 win32{
     CONFIG += debug_and_release
     CONFIG(release, debug|release) {
-            target_path = ./build_/dist
+            target_path = ./build_$$QT_VERSION/dist
         } else {
-            target_path = ./build_/debug
+            target_path = ./build_$$QT_VERSION/debug
         }
         DESTDIR = ../bin
         MOC_DIR = $$target_path/moc
         RCC_DIR = $$target_path/rcc
         OBJECTS_DIR = $$target_path/obj
+        UI_DIR = $$target_path/ui
 }
 
 # 输出编译套件信息
 message(Qt version: $$[QT_VERSION])
 message(Qt is installed in $$[QT_INSTALL_PREFIX])
 message(the NBaseUiKit will create in folder: $$target_path)
+
+FORMS += \
+    ui/page_bar.ui
 
 

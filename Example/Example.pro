@@ -22,9 +22,9 @@ HEADERS  += \
 win32{
     CONFIG += debug_and_release
     CONFIG(release, debug|release) {
-            target_path = ./build_/dist
+            target_path = ./build_$$QT_VERSION/dist
         } else {
-            target_path = ./build_/debug
+            target_path = ./build_$$QT_VERSION/debug
         }
         DESTDIR = ../bin
         MOC_DIR = $$target_path/moc

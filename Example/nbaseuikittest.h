@@ -1,4 +1,4 @@
-#ifndef NBASEUIKITTEST_H
+﻿#ifndef NBASEUIKITTEST_H
 #define NBASEUIKITTEST_H
 
 #include <QWidget>
@@ -150,6 +150,11 @@ private slots:
      * @brief on_pushButton_27_clicked 倒计时按钮
      */
     void on_pushButton_27_clicked();
+
+    /**
+     * @brief on_pushButton_28_clicked 页码控件测试
+     */
+    void on_pushButton_28_clicked();
 
 private:
     Ui::NBaseUiKitTest *ui;

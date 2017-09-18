@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QTimer>
 #include <QVBoxLayout>
+#include <QLineEdit>
 #include "QMap"
 #include "nbasemoveablewidget.h"
 #include "nbasefadewidget.h"
@@ -29,6 +30,7 @@
 #include "nbaselogowidget.h"
 #include "nbaseclickwave.h"
 #include "nbasecountdown.h"
+#include "nbasepagebar.h"
 
 
 NBaseUiKitTest::NBaseUiKitTest(QWidget *parent) :
@@ -489,4 +491,30 @@ void NBaseUiKitTest::on_pushButton_27_clicked()
     test_case_27->startCountDown();
     // 日志
     ui->textBrowser->insertPlainText(tr("倒计数窗体 测试用例,执行成功,十秒后将会关闭……\r\n"));
+}
+
+void NBaseUiKitTest::on_pushButton_28_clicked()
+{
+    // 页码测试
+    NBasePageBar *test_case_28 = new NBasePageBar();
+    test_case_28->setWindowTitle("NBasePageBar test");
+    test_case_28->setMaxVisiblePages(5);
+    test_case_28->setPerPageNum(5);
+    test_case_28->onTotalChanged(54);
+    test_case_28->setCustomerButtonText("clear");
+    test_case_28->setCustomerButtonVisable(true);
+    connect(test_case_28, &NBasePageBar::sigCurrentPageChanged, this, [this](int page){
+        QString strLog = QString("页码 %1 被触发\n").arg(page);
+        ui->textBrowser->insertPlainText(strLog);
+    });
+    connect(test_case_28, &NBasePageBar::sigCustomerBtnClicked, this, [this](){
+        QString strLog = QString("自定义按钮被点击\n");
+        ui->textBrowser->insertPlainText(strLog);
+    });
+    test_case_28->show();
+
+    // 日志
+    ui->textBrowser->insertPlainText(tr("页码 测试用例,执行成功,一分钟后将会关闭……\r\n"));
+    // 一分钟后关闭
+    QTimer::singleShot(60000, test_case_28, SLOT(deleteLater()));
 }

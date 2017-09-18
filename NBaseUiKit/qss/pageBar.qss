@@ -1,0 +1,82 @@
+﻿QLineEdit{
+	qproperty-contextMenuPolicy:"NoContextMenu";
+}
+
+QWidget#wgtPageBar QPushButton, QWidget#wgtPageBar QLabel{
+	font:12px "微软雅黑";
+	color:#333333;
+}
+
+QWidget#wgtPageBar QGroupBox{
+	border:none;
+}
+
+QWidget#wgtPageBar QLabel{
+	max-width:48px;
+	min-width:48px;
+}
+
+
+QWidget#wgtPageBar QLineEdit{
+	color:#333333;
+	background-color:transparent;
+
+	max-width:40px;
+	min-width:40px;
+	min-height:24px;
+	max-height:24px;
+
+	border:1px solid #dcdcdc;
+	border-radius:2px;
+}
+
+
+QWidget#wgtPageBar QPushButton#btn_first, QWidget#wgtPageBar QPushButton#btn_previous,QWidget#wgtPageBar QPushButton#btn_next, QWidget#wgtPageBar QPushButton#btn_last, QWidget#wgtPageBar QPushButton#btn_go, QWidget#wgtPageBar QGroupBox#gbx_pages QPushButton{
+	max-height:24px;
+	min-height:24px;
+	min-width:26px;
+	max-width:26px;
+
+	border:none;
+	border-radius:2px;
+	border:1px solid #dcdcdc;
+}
+
+QWidget#wgtPageBar QPushButton#btn_first:hover, QWidget#wgtPageBar QPushButton#btn_previous:hover,QWidget#wgtPageBar QPushButton#btn_next:hover, QWidget#wgtPageBar QPushButton#btn_last:hover,QWidget#wgtPageBar QPushButton#btn_go:hover,QWidget#wgtPageBar QGroupBox#gbx_pages QPushButton:hover{
+	background-color: #eeeeee;
+}
+
+QWidget#wgtPageBar QPushButton#btn_first:pressed, QWidget#wgtPageBar QPushButton#btn_previous:pressed,QWidget#wgtPageBar QPushButton#btn_next:pressed, QWidget#wgtPageBar QPushButton#btn_last:pressed,QWidget#wgtPageBar QPushButton#btn_go:pressed{
+	background-color: #dddddd;
+}
+
+QWidget#wgtPageBar QGroupBox#gbx_pages QPushButton:pressed{
+	background-color: #057cbd;
+}
+
+QWidget#wgtPageBar QPushButton#btn_first{ qproperty-icon:url(:/img/page_first.png);}
+QWidget#wgtPageBar QPushButton#btn_previous{ qproperty-icon:url(:/img/page_previous.png);}
+QWidget#wgtPageBar QPushButton#btn_next{ qproperty-icon:url(:/img/page_next.png);}
+QWidget#wgtPageBar QPushButton#btn_last{ qproperty-icon:url(:/img/page_last.png);}
+
+
+QWidget#wgtPageBar QGroupBox#gbxPages QPushButton:checked{
+	border-left:1px solid #303030;
+	border-right:1px solid #303030;
+	background-image: url();
+	border-color:#057cbd;
+	background-color: #057cbd;
+	color: rgb(247,247,247);
+}
+
+QWidget#wgtPageBar QPushButton#btn_go{
+	min-width:34px;
+	max-width:34px;
+}
+
+QWidget#wgtPageBar QPushButton#btn_customer{
+        qproperty-icon:url(:/image/clear.png);
+	color:rgb(255, 101, 1);
+	text-decoration: underline;
+	border:none;
+}
