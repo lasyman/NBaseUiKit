@@ -1,3 +1,4 @@
+﻿#pragma execution_character_set("utf-8")
 #include "nbasewaitdialog.h"
 #include <QKeyEvent>
 #include <QEventLoop>

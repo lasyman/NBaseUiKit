@@ -1,3 +1,4 @@
+﻿#pragma execution_character_set("utf-8")
 #include "nbaseuikittest.h"
 #include "ui_nbaseuikittest.h"
 #include <QLabel>
@@ -47,7 +48,7 @@ void NBaseUiKitTest::on_pushButton_clicked()
     // 可以移动窗体的测试用例
     NBaseMoveableWidget *test_case_001 = new NBaseMoveableWidget();
     QLabel test_case_001_label(test_case_001);
-    test_case_001_label.setText("可以移动窗体的测试用例");
+    test_case_001_label.setText(QString("可以移动窗体的测试用例"));
     test_case_001->setStyleSheet("background-color: rgba(0, 255, 0, 120);");
     test_case_001->setFixedSize(400,400);
     test_case_001->setShowToolButton();
@@ -99,7 +100,7 @@ void NBaseUiKitTest::on_pushButton_4_clicked()
     test_case_004->show();
 
     // 5秒后关闭
-    QTimer::singleShot(5000, test_case_004, SLOT(deleteLater()));
+    //QTimer::singleShot(5000, test_case_004, SLOT(deleteLater()));
 
     // 日志
     ui->textBrowser->insertPlainText("阴影窗体测试用例,执行成功,五秒后将会关闭……\r\n");
@@ -115,7 +116,7 @@ void NBaseUiKitTest::on_pushButton_5_clicked()
     test_case_005->showPopDialog();
 
     // 5秒后关闭
-    QTimer::singleShot(5000, test_case_005, SLOT(deleteLater()));
+    //QTimer::singleShot(5000, test_case_005, SLOT(deleteLater()));
 
     // 日志
     ui->textBrowser->insertPlainText("弹出窗体测试用例,执行成功,五秒后将会关闭……\r\n");
@@ -271,7 +272,7 @@ void NBaseUiKitTest::on_pushButton_13_clicked()
 void NBaseUiKitTest::on_pushButton_14_clicked()
 {
     // toastr 测试用例
-    NBaseToastr * test_case_014 = new NBaseToastr(this, "我是刀刀亮测试数据");
+    NBaseToastr * test_case_014 = new NBaseToastr(this, "toastr test");
     test_case_014->toastr();
 
     // 日志
@@ -433,7 +434,7 @@ void NBaseUiKitTest::on_pushButton_23_clicked()
     test_case_23->show();
 
     // 十秒后关闭
-    QTimer::singleShot(10000, test_case_23, SLOT(deleteLater()));
+    QTimer::singleShot(30000, test_case_23, SLOT(deleteLater()));
 
     // 日志
     ui->textBrowser->insertPlainText(tr("switch按钮 测试用例,执行成功,十秒后将会关闭……\r\n"));

@@ -1,4 +1,4 @@
-#include "nbasepopwidget.h"
+﻿#include "nbasepopwidget.h"
 
 NBasePopWidget::NBasePopWidget(QWidget *parent) : QWidget(parent)
 {
@@ -72,7 +72,7 @@ void NBasePopWidget::showAnimation()
     if(!mIsPause){
         animation=new QPropertyAnimation(this,"pos");
         animation->setDuration(mremainTime);
-        animation->setEasingCurve(QEasingCurve::OutElastic);
+        animation->setEasingCurve(QEasingCurve::InOutSine);
         animation->setStartValue(QPoint(this->x(),this->y()));
         animation->setEndValue(QPoint((desktop.availableGeometry().width()-this->width()),(desktop.availableGeometry().height()-this->height())));
         connect(animation,SIGNAL(valueChanged(QVariant)),this,SLOT(animationValueChanged(QVariant)));
